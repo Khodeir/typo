@@ -31,4 +31,5 @@ TypoBlog::Application.configure do
 
   config.logger = Logger.new(STDOUT)
   config.logger.level = Logger.const_get(([ENV['LOG_LEVEL'].to_s.upcase, "INFO"] & %w[DEBUG INFO WARN ERROR FATAL UNKNOWN]).compact.first)
+  config.active_support.deprecation = :notify
 end
