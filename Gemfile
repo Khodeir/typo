@@ -21,10 +21,10 @@ dbfile = File.expand_path("../config/database.yml", __FILE__)
 
 group :production do
   gem 'pg'
+  ruby "1.9.2"
 end
 
 source 'https://rubygems.org'
-ruby "1.9.2"
 
 gem 'thin'
 gem 'rails', '~> 3.0.10'
@@ -46,6 +46,7 @@ gem 'acts_as_tree_rails3'
 gem 'recaptcha', :require => 'recaptcha/rails', :branch => 'rails3'
 
 group :development, :test do
+  ruby "1.9.3"
   gem 'ruby-debug19'
   gem 'factory_girl', '~> 2.2'
   gem 'webrat'
